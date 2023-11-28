@@ -1,0 +1,23 @@
+Oppgave 1 - Teori
+
+b. 
+Hvis man velger å lese inn filen i konstruktøren av Spilleliste-klassen, oppnår man en viss begrenset fleksibilitet. 
+Det vil for eksempel ikke være mulig å opprette en tom spilleliste til å fylle senere, da man alltid må lese inn 
+filen når man oppretter en ny Spilleliste-instans. I tillegg vil det å binde fillesing til konstruktøren gjøre feilsøking 
+og feilhåndtering vanskeligere. Dersom det er et problem med filen som skal leses inn vil det oppstå feil ved opprettelsen 
+av objektet som kan være vanskelige å forstå. I tillegg vil det å kreve innlesing fra en fil ved opprettelsen av hvert nye
+spilleliste-objekt begrense muligheten til å lese inn muskk-data fra andre kilder, som for eksempel en database.
+
+c. 
+En grunn til å velge en liste fremfor en ordbok for å lagre sangene i klassen Spilleliste kan være det at en liste 
+bevarer rekkefølgen på elementene i den, mens en ordbok ikke tar hensyn til noen spesifikk rekkefølge for elementene. 
+Hvis for eksempel for avspillingsrekkefølgen av sangene er viktig for brukeren, vil en liste være den beste datatypen å bruke.
+I tillegg gir lister muligheten for duplikater av elementene, noe som også gir mer frihet i opprettelsen og designet av nye 
+spillelister. Lister gir også en enklere løsning for å iterere gjennom verdier, noe som blir tatt i bruk i flere av metodene til klassen.
+
+d. 
+Dersom rekkefølgen på tittel og artist endres i musikk.txt må rekkefølgen man bruker dataen fra innlesingen av filen endres når man 
+oppretter et nytt sang objekt. Med musikk.txt slik den er til vanlig, med tittel først og så artistnavn, skriver man Sang(data[0], data[1]),
+der data[0] er tittelen og data[1] er artisten. Dersom denne rekkefølgen endres i musikk.txt må man altså skrive Sang(data[1], data[0])
+for å gi riktig verdi til riktig instansvariabel i Sang-objektet. For å unngå denne typen problemer kan det være lurt å navngi de ulike
+dataene under innlesingen fra filen, slik at man heller kan skrive Sang(tittel, artist) under opprettelsen av Sang-objektet.
