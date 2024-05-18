@@ -3,7 +3,7 @@
 liste = [3,6,9]                 # oppretter en liste med tre tall
 liste.append(12)                # legger til 12 bakerst i listen
 print(liste[0], liste[2])       # skriver ut første og tredje element i listen
-
+#hei
 
 #1.2
 #lager en tom liste
